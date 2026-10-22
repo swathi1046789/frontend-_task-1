@@ -1,168 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A welcoming learning center helping every child learn and grow.">
-    <title>Kids Learning Center</title>
-    <style>
-      :root {
-        color-scheme: light;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #183153;
-        background: #f4f7fb;
-      }
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            
+            
+         <style>
+            
+        nav{
+           display: grid;
+           grid-template-columns: 30% 70%;
+           background-color:bisque;
+           font-family:sans-serif;
+           margin: 20px;
+           margin-bottom: 0px;
+        }
+        nav h2{
+            color:aqua;
+            font-family: Times New Roman;
+        }
+         .items{
+         padding-top: 35px;
 
-      * { box-sizing: border-box; }
+         }
+         .items a{
+            padding: 35px;
+            text-decoration: none;
+          
+         }
+         .head{
+            padding-left: 30px;
+         }
 
-      body { margin: 0; }
+         img{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+         }
+         main{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            font-family: cursive;
+            padding:30px;
+            background-color:aqua;
+            margin: 20px;
+            margin-top: 0px;
+        
+         }
+         .content{
+            padding-left: 40px;
+            padding-top: 40px;
+         }
+         .image{
+            padding-top: 60px;
+            padding-left: 50px;
 
-      .site-header {
-        background: #fff;
-        box-shadow: 0 2px 12px rgb(24 49 83 / 8%);
-      }
+         }
+          button {
+         color: white;
+         margin: 10px;
+         border-radius: 20px;
+         border-color: rgb(201, 201, 245);
+         background-color: blue;
+         margin-bottom: 20px;
+          }
 
-      nav {
-        width: min(1100px, calc(100% - 40px));
-        min-height: 82px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-      }
+         </style>
 
-      .brand {
-        margin: 0;
-        color: #183153;
-        font-size: 1.35rem;
-      }
+         
+        </head>
+        <body>
+          <nav>
+            <div class="head">
+            <h2>React Developer</h2>
+            </div>
+            <div class="items">
+             <a href=" ">Home</a> 
+             <a href=" ">About</a> 
+             <a href=" ">Contact</a> 
+             <a href=" "> Gallery</a> 
+             <a href=" ">Pages</a>   
+             <button>Join</button>
+            </div>
+           </nav>
+           <main>
+            <div class="content">
+           <h3>Kids learning center</h3>
+           <hr>
 
-      .items {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 24px;
-      }
+           <h2>New Approach to
+           <br> Kids Learning</h2>
+            <p>
+            Make education possible for every child. Join hands with an
+            NGO and serve the poor. Donate for education and help
+            children attain age-appropriate learning. Make education
+            possible for every child. Join hands with an NGO and serve
+            the poor. Donate for education and help children attain age
+            appropriate learning
+           </p>
 
-      .items a {
-        color: #40536e;
-        font-size: .95rem;
-        text-decoration: none;
-      }
-
-      .items a:hover, .items a:focus-visible { color: #1769aa; }
-
-      .button {
-        display: inline-block;
-        border: 0;
-        border-radius: 999px;
-        padding: 12px 22px;
-        background: #1769aa;
-        color: #fff;
-        font: inherit;
-        font-weight: 700;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-      .button:hover, .button:focus-visible { background: #10558d; }
-
-      main {
-        width: min(1100px, calc(100% - 40px));
-        min-height: 510px;
-        margin: 36px auto;
-        padding: clamp(28px, 6vw, 72px);
-        display: grid;
-        grid-template-columns: 1.05fr .95fr;
-        align-items: center;
-        gap: 48px;
-        overflow: hidden;
-        border-radius: 24px;
-        background: #e7f3fb;
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        color: #1769aa;
-        font-size: .9rem;
-        font-weight: 700;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
-
-      .content h2 {
-        margin: 0 0 18px;
-        color: #183153;
-        font-size: clamp(2.25rem, 5vw, 3.5rem);
-        line-height: 1.1;
-      }
-
-      .content p {
-        max-width: 540px;
-        margin: 0 0 28px;
-        color: #52647b;
-        font-size: 1.05rem;
-        line-height: 1.75;
-      }
-
-      .image img {
-        display: block;
-        width: 100%;
-        max-width: 440px;
-        aspect-ratio: 1;
-        margin: 0 auto;
-        border-radius: 24px;
-        object-fit: cover;
-      }
-
-      @media (max-width: 720px) {
-        nav { padding: 18px 0; align-items: flex-start; flex-direction: column; }
-        .items { gap: 14px 20px; }
-        main { grid-template-columns: 1fr; gap: 32px; margin: 20px auto; }
-        .image { grid-row: 1; }
-        .image img { max-width: 340px; }
-      }
-
-      @media (max-width: 420px) {
-        nav, main { width: min(100% - 28px, 1100px); }
-        .items { gap: 12px 16px; }
-        .items a { font-size: .9rem; }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="site-header">
-      <nav aria-label="Main navigation">
-        <h1 class="brand">React Developer</h1>
-        <div class="items">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#pages">Pages</a>
-          <a class="button" href="#join">Join</a>
-        </div>
-      </nav>
-    </header>
-
-    <main id="home">
-      <section class="content" aria-labelledby="hero-title">
-        <p class="eyebrow">Kids learning center</p>
-        <h2 id="hero-title">A brighter way for kids to learn</h2>
-        <p>
-          Make education possible for every child. Join hands with an NGO,
-          support families, and help children build the skills and confidence
-          they need to grow.
-        </p>
-        <a class="button" href="#about">Learn more</a>
-      </section>
-      <div class="image">
-        <img
-          src="https://i.pinimg.com/originals/72/1d/0c/721d0cbd0f9d9d9a399b6d15136f7360.jpg"
-          alt="Children learning together in a classroom"
-        >
-      </div>
-    </main>
-  </body>
-</html>
+           <hr>
+           <button>LearnMore</button>
+            </div>
+            <div class="image">
+              <img src="https://i.pinimg.com/originals/72/1d/0c/721d0cbd0f9d9d9a399b6d15136f7360.jpg">
+            </div>
+           </main>
+        </body>
+    </html>
+</DOCTYPE>
