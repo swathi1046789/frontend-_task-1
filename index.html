@@ -1,159 +1,168 @@
-<DOCTPYE HTML>
-    <html>
-        <head>
-            
-            
-         <style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A welcoming learning center helping every child learn and grow.">
+    <title>Kids Learning Center</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #183153;
+        background: #f4f7fb;
+      }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+      * { box-sizing: border-box; }
 
-    .navbar {
-        background-color: #f8fad0;
+      body { margin: 0; }
+
+      .site-header {
+        background: #fff;
+        box-shadow: 0 2px 12px rgb(24 49 83 / 8%);
+      }
+
+      nav {
+        width: min(1100px, calc(100% - 40px));
+        min-height: 82px;
+        margin: 0 auto;
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        margin: 80px 80px 0;
-        align-items: center;
-        padding: 25px 35px;
-    }
+        gap: 24px;
+      }
 
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 65px;
-        align-items: center;
-    }
-
-    ul li a {
-        text-decoration: none;
-        font-size: 22px;
-    }
-
-    ul li button {
-        color: black;
+      .brand {
         margin: 0;
-        border-radius: 20px;
-        border-color: rgb(0, 0, 8);
-        background-color: aqua;
-        font-size: 14px;
-        padding: 3px 10px;
-    }
+        color: #183153;
+        font-size: 1.35rem;
+      }
 
-    nav h5 {
-        color: aqua;
-        font-size: 26px;
-        font-weight: normal;
-        font-family: monospace;
-    }
+      .items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
 
-    .content {
-        background-color: aqua;
-        padding: 60px 35px;
-        position: relative;
-        min-height: 640px;
-        margin: 0 80px;
-    }
+      .items a {
+        color: #40536e;
+        font-size: .95rem;
+        text-decoration: none;
+      }
 
-    h6 {
-        font-family: Arial, sans-serif;
-        padding: 10px 0;
-        text-align: left;
-        font-size: 24px;
-    }
+      .items a:hover, .items a:focus-visible { color: #1769aa; }
 
-    hr {
-        border: none;
-        border-top: 2px solid white;
-        width: 50%;
-        margin: 20px 0 30px;
-    }
+      .button {
+        display: inline-block;
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 22px;
+        background: #1769aa;
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+      }
 
-    h3 {
-        font-family: 'Fredoka', sans-serif;
-        font-size: 36px;
-        margin-bottom: 25px;
-    }
+      .button:hover, .button:focus-visible { background: #10558d; }
 
-    p {
-        font-size: 24px;
-        line-height: 1.35;
-        margin-bottom: 20px;
-    }
+      main {
+        width: min(1100px, calc(100% - 40px));
+        min-height: 510px;
+        margin: 36px auto;
+        padding: clamp(28px, 6vw, 72px);
+        display: grid;
+        grid-template-columns: 1.05fr .95fr;
+        align-items: center;
+        gap: 48px;
+        overflow: hidden;
+        border-radius: 24px;
+        background: #e7f3fb;
+      }
 
-    button {
-        color: white;
-        margin: 10px 0;
-        border-radius: 20px;
-        border-color: rgb(0, 0, 8);
-        background-color: blue;
-        padding: 7px 18px;
-        font-size: 16px;
-    }
+      .eyebrow {
+        margin: 0 0 12px;
+        color: #1769aa;
+        font-size: .9rem;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
 
-    .image {
-        position: absolute;
-        top: 220px;
-        right: 18%;
-    }
+      .content h2 {
+        margin: 0 0 18px;
+        color: #183153;
+        font-size: clamp(2.25rem, 5vw, 3.5rem);
+        line-height: 1.1;
+      }
 
-    .image img {
-        width: 340px;
-        height: 340px;
-        border-radius: 50%;
+      .content p {
+        max-width: 540px;
+        margin: 0 0 28px;
+        color: #52647b;
+        font-size: 1.05rem;
+        line-height: 1.75;
+      }
+
+      .image img {
+        display: block;
+        width: 100%;
+        max-width: 440px;
+        aspect-ratio: 1;
+        margin: 0 auto;
+        border-radius: 24px;
         object-fit: cover;
-    }
-</style>
-         </style>
-        </head>
-        <body>
-        <div>
-            
-            <nav class="navbar">
+      }
 
-              <h5>React Developer</h5>
+      @media (max-width: 720px) {
+        nav { padding: 18px 0; align-items: flex-start; flex-direction: column; }
+        .items { gap: 14px 20px; }
+        main { grid-template-columns: 1fr; gap: 32px; margin: 20px auto; }
+        .image { grid-row: 1; }
+        .image img { max-width: 340px; }
+      }
 
+      @media (max-width: 420px) {
+        nav, main { width: min(100% - 28px, 1100px); }
+        .items { gap: 12px 16px; }
+        .items a { font-size: .9rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <h1 class="brand">React Developer</h1>
+        <div class="items">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#pages">Pages</a>
+          <a class="button" href="#join">Join</a>
+        </div>
+      </nav>
+    </header>
 
-                <ul>
-                 <li><a href>Home</a></li>
-                 <li><a href>About</a></li>
-                 <li><a href>Contact</a></li>
-                 <li><a href>Gallery</a></li>
-                 <li><a href>Page</a></li>
-                 <li> <button  style="background-color: aqua">Join Class</button></li>
-                </ul>
-            
-            </nav>
-            <div class="content">
-                <nav><h6>Kids Learining center</h6></nav>
-                
-
-                <hr>
-
-                <h3>New Approach to <br>kids Education</h3>
-                <p>
-                    Make education possible for every child. Join hands<br>
-                    with an NGO and serve the poor. Donate for education<br>
-                    and help children attain age-appropriate learning.<br>
-                    Make education possible for every child. Join hands<br>
-                    with an NGO and serve the poor. Donate for education<br>
-                    and help children attain age-appropriate learning.<br>
-                </p>
-                 <div class="image">
-                 <img src="https://img.magnific.com/free-vector/two-children-reading-books-school_1308-20777.jpg" alt="Child Learning">
-                </div>
-                
-                <hr>
-            
-
-                <button>Learn More</button>
-    
-
-
-            </div>
-           </div>
-        </body>
-    </html>
-</DOCTPYE>
+    <main id="home">
+      <section class="content" aria-labelledby="hero-title">
+        <p class="eyebrow">Kids learning center</p>
+        <h2 id="hero-title">A brighter way for kids to learn</h2>
+        <p>
+          Make education possible for every child. Join hands with an NGO,
+          support families, and help children build the skills and confidence
+          they need to grow.
+        </p>
+        <a class="button" href="#about">Learn more</a>
+      </section>
+      <div class="image">
+        <img
+          src="https://i.pinimg.com/originals/72/1d/0c/721d0cbd0f9d9d9a399b6d15136f7360.jpg"
+          alt="Children learning together in a classroom"
+        >
+      </div>
+    </main>
+  </body>
+</html>
